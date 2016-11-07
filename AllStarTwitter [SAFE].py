@@ -20,15 +20,15 @@ def main():
     api = get_api(cfg)
 
     while True:
-            try:
-                finTweet = getTweet()
-                status = api.update_status(status=finTweet)
-            except:
-                 continue
-            else:
-                break
-        time.sleep(3600)
-        main()
+        try:
+            finTweet = getTweet()
+            status = api.update_status(status=finTweet)
+        except:
+             continue
+        else:
+            break
+    time.sleep(3600)
+    main()
 
 if __name__ == "__main__":
     main()
